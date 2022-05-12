@@ -1,0 +1,36 @@
+.navbar {
+  min-height: 4em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 2em;
+  color: var(--color-1);
+  background-color: var(--color-3);
+}
+
+.brand {
+  font-size: 1.2em;
+}
+
+.brand span {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.links-list {
+  display: flex;
+}
+
+.links-list li {
+  margin-right: 1em;
+}
+
+.links-list li a {
+  padding: 0.4em 0.6em;
+}
+
+.active {
+  font-weight: 700;
+  color: var(--color-1);
+  background-color: var(--color-4);
+}

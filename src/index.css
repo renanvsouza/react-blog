@@ -71,11 +71,20 @@ label span {
   text-align: left;
 }
 
-input, textarea {
+input {
   border: none;
   border-bottom: 1px solid var(--color-2);
   padding: 0.5em 0;
   background-color: transparent;
+  font-size: 1em;
+}
+
+textarea {
+  border: none;
+  border-bottom: 1px solid var(--color-2);
+  padding: 0.5em 0;
+  background-color: transparent;
+  font-family: inherit;
   font-size: 1em;
 }
 

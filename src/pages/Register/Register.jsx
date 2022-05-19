@@ -59,12 +59,14 @@ function Register() {
           <span>Confirm password: </span>
           <input type="password" name="confirmPassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
         </label>
-        {
-          loading ?
-            <button className='btn' type="submit" disabled>Register</button>
-            :
-            <button className='btn' type="submit">Register</button>
-        }
+        <label>
+          {
+            loading ?
+              <button className='btn' type="submit" disabled>Register</button>
+              :
+              <button className='btn' type="submit">Register</button>
+          }
+        </label>
       </form>
       {(error || authError) && <p className='error'>{error || authError}</p>}
     </div>

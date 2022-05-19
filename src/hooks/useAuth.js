@@ -3,7 +3,8 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   updateProfile,
-  signOut
+  signOut,
+  signInWithEmailAndPassword
 } from 'firebase/auth';
 import { useEffect, useState } from "react";
 
@@ -40,13 +41,35 @@ function useAuth() {
       return user;
 
     } catch (error) {
-
       //Returns the error message without the "Firebase: " at the beggining
       setAuthError(error.message.slice(9));
-
     }
 
     setLoading(false);
+  }
+
+  //Login
+  async function login(data) {
+    checkIfIsCanceled();
+    setLoading(true);
+    setAuthError(null);
+
+    try {
+      await signInWithEmailAndPassword(
+        auth, data.email, data.password
+      );
+    } catch (error) {
+      //Returns the error message without the "Firebase: " at the beggining
+      setAuthError('Invalid username or password.');
+    }
+    setLoading(false);
+  }
+
+
+  //Logout
+  function logout() {
+    checkIfIsCanceled();
+    signOut(auth);
   }
 
   useEffect(() => {
@@ -54,7 +77,7 @@ function useAuth() {
   }, []);
 
 
-  return { auth, createUser, authError, loading };
+  return { auth, createUser, login, logout, authError, loading };
 }
 
 export default useAuth;

@@ -1,0 +1,30 @@
+.post {
+  margin-bottom: 2em;
+  max-width: 600px;
+  background-color: var(--color-5);
+  padding: 0.5em 0.5em 2em;
+  border-radius: 15px;
+}
+
+.post img {
+  max-width: 100%;
+  border-radius: 15px;
+}
+
+.post h2 {
+  margin-bottom: 0.4em;
+}
+
+.post p {
+  font-style: italic;
+  font-size: 0.8em;
+  margin-bottom: 1em;
+}
+
+.tags {
+  margin-bottom: 1.2em;
+}
+
+.tags span {
+  margin-right: 0.2em;
+}

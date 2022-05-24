@@ -11,6 +11,7 @@ import useAuth from './hooks/useAuth';
 import { useState, useEffect } from 'react';
 import CreatePost from './pages/CreatePost/CreatePost';
 import Dashboard from './pages/Dashboard/Dashboard';
+import Search from './pages/Search/Search';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <div className="container">
             <Routes>
               <Route path='/' element={<Home />} />
+              <Route path='/search' element={<Search />} />
               <Route path='/login'
                 element={!user ? <Login /> : <Navigate to='/' />} />
               <Route path='/register'

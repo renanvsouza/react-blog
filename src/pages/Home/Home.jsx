@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Post from '../../components/Post/Post';
 import useFetch from '../../hooks/useFetch';
 import './Home.css';
@@ -7,15 +7,14 @@ import './Home.css';
 function Home() {
   const [searchValue, setSearchValue] = useState('');
   const { documents: posts, loading } = useFetch("posts");
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
 
-    const data = {
-      searchValue
-    }
+    if (searchValue) navigate(`/search?q=${searchValue}`);
 
-    console.log(data);
+    setSearchValue('');
   }
 
   return (

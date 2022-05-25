@@ -1,0 +1,34 @@
+.post-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tags-container {
+  margin-top: 30px;
+  margin-right: 0.5em;
+  text-align: left;
+}
+
+.tags-container span {
+  margin-right: 10px;
+}
+
+.post-container {
+  background: var(--color-5);
+  margin-top: 30px;
+  padding: 0.5em 0.5em 2em;
+  border-radius: 15px;
+}
+
+.post-container img {
+  max-width: 690px;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+}
+
+.post-container p {
+  text-align: left;
+  margin-right: 0.5em;
+}

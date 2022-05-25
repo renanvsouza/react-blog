@@ -5,7 +5,7 @@ import {
   query,
   orderBy,
   onSnapshot,
-  where,
+  where
 } from "firebase/firestore";
 
 function useFetch(docCollection, search = null, uid = null) {

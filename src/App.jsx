@@ -12,6 +12,7 @@ import { useState, useEffect } from 'react';
 import CreatePost from './pages/CreatePost/CreatePost';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Search from './pages/Search/Search';
+import PostDetails from './pages/PostDetails/PostDetails';
 
 function App() {
 
@@ -42,6 +43,8 @@ function App() {
               <Route path='/posts'>
                 <Route path='create'
                   element={!user ? <Navigate to='/login' /> : <CreatePost />} />
+                <Route path=':id'
+                  element={<PostDetails />} />
               </Route>
               <Route path='/dashboard'
                 element={!user ? <Navigate to='/login' /> : <Dashboard />} />

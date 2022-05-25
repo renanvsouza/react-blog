@@ -17,7 +17,7 @@ function PostDetails() {
             <p>{post.body}</p>
             <div className="tags-container">
               <h3>Tags:</h3>
-              {post.tags.map(tag => <span>#{tag}</span>)}
+              {post.tags.map(tag => <span key={tag}>#{tag}</span>)}
             </div>
           </div>
         )
